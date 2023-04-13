@@ -21,6 +21,8 @@ export default function Absence({ subject }) {
       const promise = axios.post(`${BASE_URL}/absences`, form, config);
       promise.then(() => {
         setAdd(false);
+        setAbsence("");
+        window.location.reload(false);
       });
       promise.catch((err) => {
         console.log(err);

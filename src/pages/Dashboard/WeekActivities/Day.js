@@ -20,6 +20,7 @@ export default function WeekDay({ day, id }) {
       const promise = axios.post(`${BASE_URL}/task`, form, config);
       promise.then(() => {
         setNewAtivity(newActivity+1);
+        setActivity("");
       });
       promise.catch((err) => {
         console.log(err);

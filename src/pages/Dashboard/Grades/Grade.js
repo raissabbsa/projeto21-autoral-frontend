@@ -24,6 +24,9 @@ export default function Grade({ subject }) {
       const promise = axios.post(`${BASE_URL}/test`, form, config);
       promise.then(() => {
         setAdd(false);
+        setName("");
+        setDate("");
+        window.location.reload(false);
       });
       promise.catch((err) => {
         console.log(err);
