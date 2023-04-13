@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiOutlineCheckSquare } from "react-icons/ai";
+import { BsFillCheckSquareFill } from "react-icons/bs";
 import { useState, useContext } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../../constants/urls";
@@ -23,7 +23,7 @@ export default function ActivityList({ activity }) {
   return (
     <Container finished={finished}>
       <h5>{activity.name}</h5>
-      <AiOutlineCheckSquare onClick={() => setActivity()} />
+      <BsFillCheckSquareFill onClick={() => setActivity()} />
     </Container>
   );
 }
@@ -33,8 +33,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 170px;
-  height: 20px;
-  padding: 20px;
+  height: 40px;
+  padding: 10px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
   border-radius: 5px;
